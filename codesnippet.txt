@@ -1,0 +1,16 @@
+#Creating mysql dump 
+mysqldump -u root -p mydatabase < mydatabasedump.sql
+
+#Migrating to RDS
+
+mysql -h rds-database.clfrgvqyu1ed.ap-south-1.rds.amazonaws.com -P 3306 -u mydbuser1 -p mydatabase <mydatabasedump.sql
+
+#connecting to RDS instance
+
+mysql -h rds-database.clfrgvqyu1ed.ap-south-1.rds.amazonaws.com -P 3306 -u mydbuser1 -p
+
+#Checking the database and tables migrated
+SHOW DATABASES;
+USE mydatabase;
+SELECT * FROM table1;
+
