@@ -1,7 +1,7 @@
 #Creating mysql dump 
 mysqldump -u root -p mydatabase < mydatabasedump.sql
 
-#Migrating to RDS
+#Migrating to RDS ,here we use the RDS end point and connect and finally migrate the database dump
 
 mysql -h rds-database.clfrgvqyu1ed.ap-south-1.rds.amazonaws.com -P 3306 -u mydbuser1 -p mydatabase <mydatabasedump.sql
 
